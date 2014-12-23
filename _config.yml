@@ -1,8 +1,8 @@
 # Site settings
-title: Generic Blog
+title: Kristen Healy
 email: kristen.healy@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Blog for Kristen Healy
+  Kristen Healy's blog
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://khealy.github.io" # the base hostname & protocol for your site
 twitter_username: KristenCHealy
