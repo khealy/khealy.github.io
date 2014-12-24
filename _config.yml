@@ -8,7 +8,7 @@ url: "http://showyour.work" # the base hostname & protocol for your site
 #twitter_username: KristenCHealy
 #github_username:  khealy
 timezone: America/Los_Angeles
-exclude: ["CNAME"]
+exclude: ["CNAME", "README.md"]
 
 # Build settings
 markdown: kramdown
