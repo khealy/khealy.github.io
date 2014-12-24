@@ -4,10 +4,27 @@ title: Show Your Work
 description: > # this means to ignore newlines until "baseurl:"
   Ideas I'm playing around with. 
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://www.showyour.work" # the base hostname & protocol for your site
+url: "http://showyour.work" # the base hostname & protocol for your site
 #twitter_username: KristenCHealy
 #github_username:  khealy
 timezone: America/Los_Angeles
 
 # Build settings
 markdown: kramdown
+
+###### cribbed this from elsewhere - use ssl?
+# do not include protocol, just the domain
+#enforce_ssl: sunlightlabs.github.io
+
+#exclude: ["README.md", "todo.txt"]
+
+# markdown: kramdown + pygments, sigh
+#pygments: true
+#markdown: kramdown
+#kramdown:
+#  input: GFM
+
+# site-specific
+#google_analytics: "UA num goes here"
+#name: "Sunlight Congress API"
+#twitter: "sunlightlabs"
