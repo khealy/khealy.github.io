@@ -8,7 +8,7 @@ categories: jekyll
 ##Built-in permalink styles
 The default permalink structure for Jekyll blog posts is really long:
 
-*/:categories/:year/:month/:day/:title.html - which results in /general/2014/12/23/permalink-structure.html*
+*/:categories/:year/:month/:day/:title.html - which results in /jekyll/2014/12/23/permalink-structure.html*
 
 "Pretty" permalinks aren't much shorter - only the file extension is removed:
 
