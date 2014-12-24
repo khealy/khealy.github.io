@@ -9,7 +9,7 @@ url: "http://khealy.github.io" # the base hostname & protocol for your site
 #github_username:  khealy
 timezone: America/Los_Angeles
 exclude: ["README.md"]
-permalink: /blog/:title
+permalink: /posts/:year/:month/:title
 
 # Build settings
 markdown: kramdown
