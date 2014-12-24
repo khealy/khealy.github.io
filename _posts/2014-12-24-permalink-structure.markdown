@@ -27,5 +27,5 @@ Setting this up is simple. All that's needed is a single line of code in _config
 
 *permalink: /posts/:year/:month/:title*
 
-TADA!
+You'll notice that all the variables are prepended with a colon. For a full list of variables that you can use, see the [Jekyll permalink docs](http://jekyllrb.com/docs/permalinks/).
 
