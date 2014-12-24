@@ -14,7 +14,7 @@ The default permalink structure for Jekyll is really long:
 
 */:categories/:year/:month/:day/:title - which results in /general/2014/12/23/permalink-structure*
 
-Seems like overkill for me - I can't see creating so many posts a day that I'd really need to have a day in my file structure. And I don't like the idea of having posts separated into directories by category.
+Seems like overkill for this site. I probably won't be creating multiple posts per day, so I don't think I'll need a day in my file structure. And I don't like the idea of having categories as top-level directories.
 
 
 Fortunately, Jekyll makes it easy to customize permalinks. 
