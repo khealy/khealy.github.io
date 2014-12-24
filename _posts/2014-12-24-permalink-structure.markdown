@@ -21,7 +21,7 @@ Fortunately, Jekyll makes it easy to customize permalinks.
 
 ##Creating a custom permalink style
 
-For this site, I've decided that I want to organize all of my posts into a "post" directory, with subdirectories for year, then date.
+For this site, I've decided that I want to organize all of my posts into a "posts" directory, with subdirectories for year, then date.
 
 Setting this up is simple. All that's needed is a single line of code in _config.yml:
 
