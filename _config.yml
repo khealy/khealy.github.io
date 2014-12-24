@@ -8,6 +8,7 @@ url: "http://showyour.work" # the base hostname & protocol for your site
 #twitter_username: KristenCHealy
 #github_username:  khealy
 timezone: America/Los_Angeles
+exclude: ["CNAME"]
 
 # Build settings
 markdown: kramdown
@@ -16,7 +17,7 @@ markdown: kramdown
 # do not include protocol, just the domain
 #enforce_ssl: sunlightlabs.github.io
 
-#exclude: ["README.md", "todo.txt"]
+
 
 # markdown: kramdown + pygments, sigh
 #pygments: true
