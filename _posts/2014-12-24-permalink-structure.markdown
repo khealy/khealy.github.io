@@ -2,7 +2,8 @@
 layout: post
 title:  "Permalink Structure"
 date:   2014-12-24
-categories: jekyll
+category: code
+tags: [jekyll, yaml]
 ---
 
 ##Built-in permalink styles

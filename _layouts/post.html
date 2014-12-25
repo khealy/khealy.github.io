@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+{% assign post = page %}
 <div class="post">
 
   <header class="post-header">
@@ -10,6 +11,36 @@ layout: default
 
   <article class="post-content">
     {{ content }}
+    {% if post.category %}
+        {% for site_category in site.data.categories %}
+            {% if site_category.slug == post.category %}
+                {% assign category = site_category %}
+            {% endif %}
+        {% endfor %}
+        {% if category %}
+            {% capture category_content %} in category <a href="/taxonomy/category/{{ category.slug }}/">{{ category.name }}</a> {% endcapture %}
+        {% endif %}
+        {% else %}
+            {% assign category_content = '' %}
+    {% endif %}
+
+        {% if post.tags.size > 0 %}
+            {% capture tags_content %} with tag{% if post.tags.size > 1 %}s{% endif %}: {% endcapture %}
+            {% for post_tag in post.tags %}
+                {% for data_tag in site.data.tags %}
+                    {% if data_tag.slug == post_tag %}
+                        {% assign tag = data_tag %}
+                    {% endif %}
+                {% endfor %}
+                {% if tag %}
+                    {% capture tags_content_temp %}{{ tags_content }}<a href="/taxonomy/tag/{{ tag.slug }}/">{{ tag.name }}</a>{% if forloop.last == false %}, {% endif %}{% endcapture %}
+                    {% assign tags_content = tags_content_temp %}
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            {% assign tags_content = '' %}
+        {% endif %}
+        <p id="post-meta">Posted {{ category_content }}{{ tags_content }}.</p>
   </article>
 
 </div>

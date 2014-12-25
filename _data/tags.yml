@@ -1,0 +1,14 @@
+- slug: github
+  name: GitHub
+
+- slug: jekyll
+  name: Jekyll
+
+- slug: liquid
+  name: Liquid
+
+- slug: running
+  name: Running
+
+- slug: yaml
+  name: YAML
