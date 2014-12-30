@@ -1,6 +1,6 @@
 ---
 layout: blog_by_tag
 title: 'Posts by tag: goals'
-tag: yaml
+tag: goals
 permalink: taxonomy/tag/goals/
 ---
