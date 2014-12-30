@@ -1,11 +1,17 @@
 - slug: github
   name: GitHub
 
+- slug: goals
+  name: Goals
+
 - slug: jekyll
   name: Jekyll
 
 - slug: liquid
   name: Liquid
+
+- slug: process
+  name: Process
 
 - slug: running
   name: Running
