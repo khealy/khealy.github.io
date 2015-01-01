@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Initial Post"
-date:   2014-12-23 10:48:23
-category: code
-tags: [jekyll, github]
+title:  "Goodbye 2014"
+date:   2015-01-01
+category: creations
+tags: [drawing]
 ---
-Just a quick post to verify that this blog is up and running. I'm excited to try out Jekyll as a blogging platform!
+Ready for a clean slate.
 
-Thanks to <a href="http://www.webhostwhat.com/guide-how-to-host-jekyll-blog-on-github-using-a-mac/" target="_blank">this article on Web Host What</a> for making this so easy to set up! 
+![My helpful screenshot]({{ site.url }}/images/2014/01/goodbye2014.jpg)
