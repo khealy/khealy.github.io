@@ -1,6 +1,6 @@
 Bike Share Case Study
 ================
-Kristen Healy
+Kristen Healy  
 2024-04-16
 
 - [Executive Summary](#executive-summary)
