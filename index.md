@@ -1,2 +1,3 @@
 # Portfolio Projects
-## Bike Share Case Study
+## R
+- [Bike Share Case Study]<"/portfolio/bikeshare">
