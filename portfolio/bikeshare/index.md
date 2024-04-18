@@ -430,7 +430,7 @@ AllData_2023_v2 %>%
   labs(title = "Ride Duration by Customer Type (Month)", x=NULL, y="Average Duration (minutes)", fill = "Customer Type")
 ```
 
-![](BikeShareCaseStudy_files/figure-gfm/duration%20by%20month-1.png)<!-- -->
+![](figure-gfm/duration%20by%20month-1.png)<!-- -->
 
 #### Duration Differences by Day of Week
 
@@ -453,7 +453,7 @@ AllData_2023_v2 %>%
   labs(title = "Ride Duration by Customer Type (Day of Week)", x=NULL, y="Average Duration (minutes)", fill = "Customer Type")
 ```
 
-![](BikeShareCaseStudy_files/figure-gfm/duration%20day%20of%20week-1.png)<!-- -->
+![](figure-gfm/duration%20day%20of%20week-1.png)<!-- -->
 
 #### Duration Differences by Hour of Day
 
@@ -473,7 +473,7 @@ AllData_2023_v2 %>%
   labs(title = "Ride Duration by Customer Type (Hour of Day)", x=NULL, y="Average Duration (minutes)", fill = "Customer Type")
 ```
 
-![](BikeShareCaseStudy_files/figure-gfm/number%20of%20rides%20by%20hour%20of%20day-1.png)<!-- -->
+![](figure-gfm/number%20of%20rides%20by%20hour%20of%20day-1.png)<!-- -->
 
 ### Ride Counts
 
@@ -501,7 +501,7 @@ AllData_2023_v2 %>%
   labs(title = "Ride Count by Customer Type (Month)", x=NULL, y="Number of Rides", fill = "Customer Type")
 ```
 
-![](BikeShareCaseStudy_files/figure-gfm/ride%20counts%20by%20month-1.png)<!-- -->
+![](figure-gfm/ride%20counts%20by%20month-1.png)<!-- -->
 
 #### Ride Count Differences by Day of Week
 
@@ -523,7 +523,7 @@ AllData_2023_v2 %>%
   labs(title = "Ride Count by Customer Type (Day of Week)", x=NULL, y="Number of Rides", fill = "Customer Type")
 ```
 
-![](BikeShareCaseStudy_files/figure-gfm/ride%20counts%20by%20day%20of%20week-1.png)<!-- -->
+![](figure-gfm/ride%20counts%20by%20day%20of%20week-1.png)<!-- -->
 
 #### Ride Count Differences by Hour of Day
 
@@ -544,7 +544,7 @@ AllData_2023_v2 %>%
   labs(title = "Ride Count by Customer Type (Hour of Day)", x=NULL, y="Number of Rides", fill = "Customer Type")
 ```
 
-![](BikeShareCaseStudy_files/figure-gfm/ride%20counts%20by%20hour%20of%20day-1.png)<!-- -->
+![](figure-gfm/ride%20counts%20by%20hour%20of%20day-1.png)<!-- -->
 
 ### Bike Types
 
@@ -587,7 +587,7 @@ AllData_2023_v2 %>%
   labs(title = "Number of Rides by Customer and Bike Type", x=NULL, y="Number of Rides", fill = "Customer Type")
 ```
 
-![](BikeShareCaseStudy_files/figure-gfm/customer%20type%20and%20bike%20type-1.png)<!-- -->
+![](figure-gfm/customer%20type%20and%20bike%20type-1.png)<!-- -->
 
 ``` r
 AllData_2023_v2 %>%
@@ -600,4 +600,4 @@ AllData_2023_v2 %>%
   labs(title = "Ride Duration Customer and Bike Types", x=NULL, y="Ride Duration (minutes)", fill = "Customer Type")
 ```
 
-![](BikeShareCaseStudy_files/figure-gfm/customer%20type%20and%20bike%20type%20(duration)-1.png)<!-- -->
+![](figure-gfm/customer%20type%20and%20bike%20type%20(duration)-1.png)<!-- -->
