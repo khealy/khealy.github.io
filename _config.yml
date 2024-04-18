@@ -2,7 +2,6 @@ theme: jekyll-theme-dinky
 logo: /assets/images/Kristen_circle_150.png
 title: Kristen Healy
 description: Portfolio
-sidebar:
  - <a href="https://www.linkedin.com/in/kristenhealy">LinkedIn</a>
 #  - label: Dev Docs
 #    children:
