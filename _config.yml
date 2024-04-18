@@ -1,5 +1,6 @@
 title: Kristen Healy
 theme: jekyll-theme-dinky
 logo: /assets/images/Kristen_circle_150.png
-description: Portfolio > # sidebar
- <a href="https://www.linkedin.com/in/kristenhealy">LinkedIn</a>
+description:
+  Portfolio
+  <a href="https://www.linkedin.com/in/kristenhealy">LinkedIn</a>
