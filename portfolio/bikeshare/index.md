@@ -1,4 +1,5 @@
-# Bike Share Case Study
+Bike Share Case Study
+================
 Kristen Healy
 2024-04-16
 
