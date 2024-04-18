@@ -1,10 +1,6 @@
----
-title: Bike Share Case Study
-author: Kristen Healy
-date: 2024-04-16
-tags:
-- R
----
+# Bike Share Case Study
+Kristen Healy
+2024-04-16
 
 - [Executive Summary](#executive-summary)
   - [Further Research](#further-research)
