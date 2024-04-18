@@ -1,3 +1,3 @@
 # Projects
-## R
+## Marketing
 - [Bike Share Case Study](portfolio/bikeshare/index.md)
