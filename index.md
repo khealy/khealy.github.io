@@ -1,7 +1,8 @@
 # Projects
 
 ## Marketing
-- [Bike Share Case Study](portfolio/bikeshare/index.md) - Exploration of Divvy bike share data using R.
+- [Bike Share Case Study](portfolio/bikeshare/index.md) - Exploration of Divvy bike share data using **R**.
   
 ## Sales
-- [Sales Dashboard](https://public.tableau.com/app/profile/kristen.healy/viz/SalesDashboard_17122515328010/EmployeeSalesPerformance) - Sales performance dashboard created in Tableau.
+- [Sales Dashboard](https://public.tableau.com/app/profile/kristen.healy/viz/SalesDashboard_17122515328010/EmployeeSalesPerformance) - Sales performance dashboard created in **Tableau**.
+- [Maven Roasters Franchise Dashboard](https://1drv.ms/x/c/07bef487dbcd28dd/EXk6qpSfFyFNmX-xypDB3KIBjM4jufJFB90wxsmRS8_6wA) - Dashboard created in **Excel** for New York owners of the fictional Maven Roasters coffee franchise.
