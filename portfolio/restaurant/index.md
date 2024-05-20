@@ -3,13 +3,17 @@ Restaurant Order Analysis
 Kristen Healy  
 2024-05-20
 
-- [Executive Summary](#executive-summary)
+
 - [Assignment](#assignment)
+- [Executive Summary](#executive-summary)
 - [Data Analysis](#data-analysis)
   - [Menu Items](#menu-items-table)
   - [Orders](#orders-table)
   - [Combined Data](#combined-data)
- 
+
+## Assignment
+The fictional Taste of the World Café, a restaurant serving international cuisine, debuted a new menu at the beginning of the year. The business owner wants to get an understanding of how the new menu items are doing with customers: what's doing well and what's not, and what the top customers like best.
+
 ## Executive Summary
 The menu has 32 items across 4 different international cuisines:
 - Italian (9)
@@ -18,9 +22,6 @@ The menu has 32 items across 4 different international cuisines:
 - American (6)
 
 Prices range from $5 (Edamame) to $19.95 (Shrimp Scampi), with an average menu item price of $13.29. Italian is the highest-priced category on average ($16.75), followed by Asian ($13.48). 
-
-## Assignment
-The fictional Taste of the World Café, a restaurant serving international cuisine, debuted a new menu at the beginning of the year. The business owner wants to get an understanding of how the new menu items are doing with customers: what's doing well and what's not, and what the top customers like best.
 
 ## Data Analysis
 The data I've received is in a MySQL database, and consists of 2 tables:
