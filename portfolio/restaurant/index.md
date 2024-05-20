@@ -11,7 +11,13 @@ Kristen Healy
   - [Combined Data](#bike-types)
  
 ## Executive Summary
+The menu has 32 items across 4 different international cuisines:
+- Italian (9)
+- Asian (8)
+- Mexican (9)
+- American (6)
 
+Prices range from $5 (Edamame) to $19.95 (Shrimp Scampi), with an average menu item price of $13.29.
 
 ## Assignment
 The fictional Taste of the World Café, a restaurant serving international cuisine, debuted a new menu at the beginning of the year. The business owner wants to get an understanding of how the new menu items are doing with customers: what's doing well and what's not, and what the top customers like best.
