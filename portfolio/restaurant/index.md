@@ -37,16 +37,16 @@ FROM menu_items;
 ```
 /* number of menu items and categories */
 SELECT
-	COUNT(menu_item_id) AS num_items,
+    COUNT(menu_item_id) AS num_items,
     COUNT(DISTINCT category) AS num_categories
 FROM menu_items;
 ```
-![number of items and categories](images/itemCatCount.png)
+![number of items and categories](images/ItemCatCount.png)
 ```
 /* Summary menu item pricing info */
 /* Price info: high, low, average & mode */
 SELECT
-	MAX(price) AS highest_price,
+    MAX(price) AS highest_price,
     MIN(price) AS lowest_price,
     ROUND(AVG(price),2) AS avg_price,
     (SELECT price
@@ -55,6 +55,33 @@ SELECT
 		ORDER  BY COUNT(*) DESC, price DESC
 		LIMIT 1) AS most_frequent_price
 FROM menu_items;
+```
+![pricing info](images/pricingInfo.png)
+
+```
+/* What are the least expensive items on the menu?*/
+SELECT
+    item_name,
+    category,
+    price
+FROM
+	menu_items
+ORDER BY
+	price
+LIMIT 5;
+```
+![pricing info](images/pricingInfo.png)
+```
+/* What are the most expensive items on the menu*/
+SELECT
+    item_name,
+    category,
+    price
+FROM
+	menu_items
+ORDER BY
+	price DESC
+LIMIT 5;
 ```
 ![pricing info](images/pricingInfo.png)
 ### Orders Table
