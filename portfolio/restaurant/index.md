@@ -44,7 +44,6 @@ FROM menu_items;
 ![number of items and categories](images/ItemCatCount.png)
 ```
 /* Summary menu item pricing info */
-/* Price info: high, low, average & mode */
 SELECT
     MAX(price) AS highest_price,
     MIN(price) AS lowest_price,
@@ -84,5 +83,20 @@ ORDER BY
 LIMIT 5;
 ```
 ![most expensive](images/mostExpensive.png)
+
+```
+/* summary pricing info by category */    
+SELECT
+	category,
+    COUNT(menu_item_id) AS num_items,
+    MAX(price) AS most_expensive,
+    MIN(price) AS least_expensive,
+    ROUND(AVG(price),2) AS avg_price
+FROM menu_items
+GROUP BY category
+ORDER BY avg_price DESC, num_items DESC;
+```
+![category pricing summary](images/categoryPricing.png)
+
 ### Orders Table
 ### Combined Data
