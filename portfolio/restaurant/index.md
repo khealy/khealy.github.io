@@ -35,6 +35,14 @@ FROM menu_items;
 ![menu_items table](images/menu_items.png)
 
 ```
+/* number of menu items and categories */
+SELECT
+	COUNT(menu_item_id) AS num_items,
+    COUNT(DISTINCT category) AS num_categories
+FROM menu_items;
+```
+![number of items and categories](images/itemCatCount.png)
+```
 /* Summary menu item pricing info */
 /* Price info: high, low, average & mode */
 SELECT
@@ -48,6 +56,6 @@ SELECT
 		LIMIT 1) AS most_frequent_price
 FROM menu_items;
 ```
-
+![pricing info](images/pricingInfo.png)
 ### Orders Table
 ### Combined Data
