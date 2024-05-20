@@ -70,7 +70,7 @@ ORDER BY
 	price
 LIMIT 5;
 ```
-![pricing info](images/pricingInfo.png)
+![least expensive](images/leastExpensive.png)
 ```
 /* What are the most expensive items on the menu*/
 SELECT
@@ -83,6 +83,6 @@ ORDER BY
 	price DESC
 LIMIT 5;
 ```
-![pricing info](images/pricingInfo.png)
+![most expensive](images/mostExpensive.png)
 ### Orders Table
 ### Combined Data
