@@ -6,9 +6,9 @@ Kristen Healy
 - [Executive Summary](#executive-summary)
 - [Assignment](#assignment)
 - [Data Analysis](#data-analysis)
-  - [Menu Items](#duration)
-  - [Orders](#ride-counts)
-  - [Combined Data](#bike-types)
+  - [Menu Items](#menu-items-table)
+  - [Orders](#orders-table)
+  - [Combined Data](#combined-data)
  
 ## Executive Summary
 The menu has 32 items across 4 different international cuisines:
