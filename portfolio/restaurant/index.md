@@ -34,5 +34,20 @@ FROM menu_items;
 ```
 ![menu_items table](images/menu_items.png)
 
+```
+/* Summary menu item pricing info */
+/* Price info: high, low, average & mode */
+SELECT
+	MAX(price) AS highest_price,
+    MIN(price) AS lowest_price,
+    ROUND(AVG(price),2) AS avg_price,
+    (SELECT price
+		FROM   menu_items
+		GROUP  BY price
+		ORDER  BY COUNT(*) DESC, price DESC
+		LIMIT 1) AS most_frequent_price
+FROM menu_items;
+```
+
 ### Orders Table
 ### Combined Data
