@@ -25,7 +25,7 @@ The menu has 32 items across 4 different international cuisines:
 
 Prices range from $5 (Edamame) to $19.95 (Shrimp Scampi), with an average menu item price of $13.29. Italian is the highest-priced category on average ($16.75), followed by Asian ($13.48). 
 
-Note: I'm using "top orders by total" and as a proxy for "top customers" since we don't have customer-level data, just order- and item-level data.
+**Note:** I'm using "top orders by total" and as a proxy for "top customers" since we don't have customer-level data, just order- and item-level data.
 
 ## Detailed Analysis
 The restaurant consists of 2 tables:
