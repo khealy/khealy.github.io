@@ -12,7 +12,7 @@ Kristen Healy
   - [Combined Data](#combined-data)
 
 ## Assignment
-The fictional Taste of the World Café, a restaurant serving international cuisine, debuted a new menu at the beginning of the year. The business owner wants to get an understanding of how the new menu items are doing with customers: what's doing well and what's not, and what the top customers like best.
+The fictional Taste of the World Café, a restaurant serving international cuisine, debuted a new menu at the beginning of the year. The business owner wants to get an understanding of how the new menu items are doing with customers: which items are doing well and which are not, and what its top customers seem to like best.
 
 Because the owner wants the information quickly and the data is in a MySQL database, all of the analysis will be done in SQL.
 
@@ -24,6 +24,8 @@ The menu has 32 items across 4 different international cuisines:
 - American (6)
 
 Prices range from $5 (Edamame) to $19.95 (Shrimp Scampi), with an average menu item price of $13.29. Italian is the highest-priced category on average ($16.75), followed by Asian ($13.48). 
+
+Note: I'm using "top orders by total" and as a proxy for "top customers" since we don't have customer-level data, just order- and item-level data.
 
 ## Detailed Analysis
 The restaurant consists of 2 tables:
