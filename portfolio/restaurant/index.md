@@ -32,9 +32,8 @@ The restaurant consists of 2 tables:
 - menu_items
 - order_detail
 
-The are 3 months of orders to analyze, covering January-March.
-
 ### Menu Items Table
+
 ```
 /* set restaurant_db as the my default db */
 USE restaurant_db;
@@ -176,6 +175,6 @@ SELECT
 FROM order_details 
 GROUP BY order_month;
 ```
-![order/item counts by month](images/countByMonth.png)
+![order/item counts by month](images/countsByMonth.png)
 
 ### Combined Data
