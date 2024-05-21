@@ -167,4 +167,15 @@ HAVING
 ```
 ![orders with more than 12 items](images/twelveOrMore.png)
 
+```
+/* Are there any differences in order/item counts by month? */
+SELECT 
+    MONTH(order_date) AS order_month,
+	COUNT(DISTINCT order_id) AS num_orders,
+    COUNT(item_id) AS num_items
+FROM order_details 
+GROUP BY order_month;
+```
+![order/item counts by month](images/countByMonth.png)
+
 ### Combined Data
