@@ -117,14 +117,54 @@ SELECT *
 FROM
 	order_details;
 ```
-![category pricing summary](images/orderTable.png)
+![orders table](images/orderTable.png)
 ```
-/* What period does it show */
+/* What order dates are included in the table? */
 SELECT 
 	MIN(order_date) AS first_date,
     MAX(order_date) AS last_date
 FROM
 	order_details;
  ```
-![category pricing summary](images/orderDateRange.png)
+![order date range](images/orderDateRange.png)
+```
+/* 	How many orders?
+	How many items were ordered?
+*/
+
+SELECT 
+	COUNT(DISTINCT order_id) AS num_orders,
+    COUNT(order_details_id) num_order_items
+FROM order_details;
+```
+![order and item counts](images/numOrderItems.png)
+```
+/*	Which orders had the most items? */
+SELECT 
+	order_id,
+	COUNT(item_id) AS num_items
+FROM
+	order_details
+GROUP BY
+	order_id
+ORDER BY
+	num_items DESC;
+```
+![most items](images/mostItems.png)
+```
+/*	How many orders had more than 12 items: */
+
+SELECT COUNT(*) FROM
+(SELECT
+	order_id,
+	COUNT(item_id) AS num_items
+FROM
+	order_details
+GROUP BY
+	order_id
+HAVING
+	num_items > 12) AS num_orders;
+```
+![orders with more than 12 items](images/twelveOrMore.png)
+
 ### Combined Data
