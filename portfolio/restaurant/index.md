@@ -33,6 +33,11 @@ The restaurant database consists of 2 tables:
 - order_detail
 
 ### Menu Items Table
+The menu_items table included the following columns:
+- menu_item_id
+- item_name
+- category
+- price
 
 ```
 /* set restaurant_db as the my default db */
@@ -109,6 +114,12 @@ ORDER BY avg_price DESC, num_items DESC;
 ![category pricing summary](images/categoryPricing.png)
 
 ### Orders Table
+The table contains rows for each order_details_id. The order_details table included the following columns:
+- order_details_id
+- order_id
+- order_date
+- order_time
+- item_id
 
 ```
 /* view order details table */
@@ -179,7 +190,7 @@ GROUP BY order_month;
 
 ### Combined Data
 
-After becoming familiar with the two tables, I used join queries to combine them for more detailed analysis.
+After becoming familiar with the two tables, I used join queries to combine them for detailed analysis.
 ```
 /* 	Create view combining the menu_items table and the order_details table.
 	We'll use this in other queries.
