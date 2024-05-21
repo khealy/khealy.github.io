@@ -28,7 +28,7 @@ Prices range from $5 (Edamame) to $19.95 (Shrimp Scampi), with an average menu i
 **Note:** I'm using "top orders by total" as a proxy for "top customers" since we have order- and item-level data but not customer-level data.
 
 ## Detailed Analysis
-The restaurant consists of 2 tables:
+The restaurant database consists of 2 tables:
 - menu_items
 - order_detail
 
@@ -178,3 +178,21 @@ GROUP BY order_month;
 ![order/item counts by month](images/countsByMonth.png)
 
 ### Combined Data
+
+After becoming familiar with the two tables, I used join queries to combine them for more detailed analysis.
+```
+/* 	Create view combining the menu_items table and the order_details table.
+	We'll use this in other queries.
+*/
+CREATE VIEW full_order_details AS
+SELECT *
+FROM
+	order_details
+LEFT JOIN menu_items
+	ON order_details.item_id = menu_items.menu_item_id;
+
+SELECT *
+FROM
+	full_order_details;
+```
+![order/combined view](images/fullOrderDetails.png)
