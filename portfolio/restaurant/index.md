@@ -110,4 +110,21 @@ ORDER BY avg_price DESC, num_items DESC;
 ![category pricing summary](images/categoryPricing.png)
 
 ### Orders Table
+
+```
+/* view order details table */
+SELECT *
+FROM
+	order_details;
+```
+![category pricing summary](images/orderTable.png)
+```
+/* What period does it show */
+SELECT 
+	MIN(order_date) AS first_date,
+    MAX(order_date) AS last_date
+FROM
+	order_details;
+ ```
+![category pricing summary](images/orderDateRange.png)
 ### Combined Data
