@@ -37,7 +37,7 @@ The most frequently ordered items were:
 And the least frequently ordered items were:
 - Chicken Tacos, $11.95
 - Postickers, $9
-- Cheese Lasagna, $15.50,
+- Cheese Lasagna, $15.50
 - Steak Tacos, $13.95
 - Cheese Quasadillas, $10.50
 
