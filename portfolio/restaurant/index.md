@@ -65,7 +65,6 @@ The menu_items table included the following columns:
 - item_name
 - category
 - price
-
 ```
 /* set restaurant_db as the my default db */
 USE restaurant_db;
