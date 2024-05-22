@@ -52,9 +52,11 @@ And the least frequently ordered items were:
 **Note:** I used "top orders" as a proxy for "top customers" since we have order- and item-level data but not customer-level data.
 
 ### Recommendations ###
-Although the "American" category has the lowest average prices, the items in this category are ordered frequently when looking at orders as a whole. Although it's ordered far less often by our top spenders, I would recommend leaving the category as-is, since this seems to indicate that it's broadly popular.
+Although the American category has the lowest average prices, the items in this category are ordered frequently by customers as a whole. Although it's ordered far less often by our top spenders, I would recommend leaving the category as is; its broad popularity indicates that it's an important category for driving numbers of people to the restaurant.
 
-The "Mexican" category, however, needs changes. I would recommend eliminating the Chicken Tacos from the menu since it's performing poorly: it was ordered only once by our highest spend orders
+The Mexican category, however, needs changes. I would recommend eliminating both the Chicken Tacos and the Cheese Quesadillas from the menu since they're performing poorly. The tacos were ordered only once by our highest spenders and is the least popular item amongst all customer orders, despite its relatively low price ($11.95). Similarly the quesadillas ($10.95) were the 5th least popular item overall and weren't ordered at all by our highest spenders.
+
+Overall, both the Italian and Asian categories are doing well
 
 ## Query Details
 The restaurant database consists of 2 tables:
@@ -267,7 +269,22 @@ ORDER BY
 	cat_count DESC;
 ```
 ![categories by item count](images/categoryPopularity.png)
-
+```
+/* items by revenue */
+SELECT
+	item_name,
+    category,
+    price,
+    SUM(price) AS item_revenue,
+    COUNT(item_id) AS item_count
+FROM
+	full_order_details
+GROUP BY
+	item_name,category,price
+ORDER BY
+	item_revenue DESC;
+```
+![items by revenue](images/itemsByRevenue.png)
 ```
 /* rank orders by highest spend */
 SELECT 
