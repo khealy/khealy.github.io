@@ -5,7 +5,7 @@ Kristen Healy
 
 
 - [Assignment](#assignment)
-- [Executive Summary](#executive-summary)
+- [Data Overview](#data-overview)
   - [Recommendations and Next Steps](#recommendations-and-next-steps)
 - [Query Details](#query-details)
   - [Menu Items](#menu-items-table)
@@ -17,7 +17,9 @@ The fictional Taste of the World Café, a restaurant serving international cuisi
 
 Because the owner wants the information quickly and the data is in a MySQL database, all of the analysis will be done in SQL.
 
-## Executive Summary
+**Note:** I used "top orders" as a proxy for "top customers" since we have order- and item-level data but not customer-level data.
+
+## Data Overview
 We have 3 months of order data--from January through March, with 5370 total orders and 12,234 items ordered. The 7 top orders by item count had 14 items on them, and 20 orders had more than 12 items. January and March had similar order numbers (1800+), while there was a dip in February (<1700). Total revenue for the period was $159,217.
 
 The menu has 32 items across 4 different international cuisines:
@@ -26,7 +28,7 @@ The menu has 32 items across 4 different international cuisines:
 - Mexican (9)
 - American (6)
 
-The Asian category had the most items ordered at 3470, followed by Italian (2948), Mexican (2945), and American (2734). Interestingly, although the **American** category trailed the rest, 3 of the most frequently ordered items were in that category:
+The Asian category had the most items ordered at 3470, followed by Italian (2948), Mexican (2945), and American (2734). Interestingly, although the **American** category trailed the rest, which is unsurprising since the category has the fewest items, 3 of the most frequently ordered items were in that category:
 
 - **Hamburger, $12.95**
 - Edamame, $5
@@ -43,14 +45,12 @@ Given that, it wasn't suprising to find that the **top 5 orders by spend** (>$18
 - Mexican, 16 items
 - American, 10 item
 
-**Note:** I used "top orders" as a proxy for "top customers" since we have order- and item-level data but not customer-level data.
-
 ### Recommendations and Next Steps ###
-Although the American category has the lowest average prices, the items in this category are ordered frequently by customers as a whole. Although it's ordered far less often by our top spenders, I would recommend leaving the category largely as is because it's driving both revenue and order numbers. The cheeseburger and hamburger, for example are among our top 5 items by revenue.
+Although the American category has the lowest average prices, the items in this category are ordered frequently by customers as a whole. Although our top spenders order "American" items less often, I would recommend leaving the category largely as is because it's driving both revenue and order numbers. The cheeseburger and hamburger, for example are among our top 5 items by revenue.
 
 The Mexican category, however, needs changes. I would recommend eliminating both the Chicken Tacos and the Cheese Quesadillas from the menu since they're performing poorly. The tacos were ordered only once by our highest spenders and is the least popular item amongst all customer orders, despite its relatively low price ($11.95). Similarly the quesadillas ($10.95) were the 5th least popular item overall and weren't ordered at all by our highest spenders.
 
-Overall, both the Italian and Asian categories are doing well. They are the top 2 categories by revenue, and are broadly populary judged by order item count. Therefore, I don't recommend any immediate changes in either of these categories.
+Overall, both the Italian and Asian categories are doing well. They are the top 2 categories by revenue, and are broadly popular judged by order item count. Therefore, I don't recommend any immediate changes to either of these categories.
 
 **Next steps:** I'd like to conduct a customer survey to get some additional information from our customers about what changes they'd like to see on our menu. I'll set up a meeting with you and the executive chef to discuss the parameters.
 
