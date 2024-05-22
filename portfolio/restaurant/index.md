@@ -25,7 +25,9 @@ The menu has 32 items across 4 different international cuisines:
 
 Prices range from $5 (Edamame) to $19.95 (Shrimp Scampi), with an average menu item price of $13.29. Italian is the highest-priced category on average ($16.75), followed by Asian ($13.48). 
 
-We have 3 months of order data--from January through March.
+We have 3 months of order data--from January through March, with 5370 total orders and 12,234 items ordered. The 7 top orders by item count had 14 items on them, and 20 orders had more than 12 items. January and March had similar order numbers (1800+), while there was a dip in February (<1700).
+
+The top 5 orders by spend (>$185) ordered heavily from the Italian category,
 
 **Note:** I used "top orders" as a proxy for "top customers" since we have order- and item-level data but not customer-level data.
 
@@ -210,6 +212,21 @@ FROM
 ```
 ![order/combined view](images/fullOrderDetails.png)
 
+```
+/* most often ordered */
+SELECT
+	item_name,
+    category,
+    price,
+    COUNT(item_id) item_count
+FROM
+	full_order_details
+GROUP BY
+	item_name,category,price
+ORDER BY
+	item_count DESC;
+```
+![items by order frequency](images/popularItems.png)
 ```
 /* rank orders by highest spend */
 SELECT 
