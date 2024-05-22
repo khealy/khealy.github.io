@@ -17,22 +17,23 @@ The fictional Taste of the World Café, a restaurant serving international cuisi
 Because the owner wants the information quickly and the data is in a MySQL database, all of the analysis will be done in SQL.
 
 ## Executive Summary
+We have 3 months of order data--from January through March, with 5370 total orders and 12,234 items ordered. The 7 top orders by item count had 14 items on them, and 20 orders had more than 12 items. January and March had similar order numbers (1800+), while there was a dip in February (<1700).
+
 The menu has 32 items across 4 different international cuisines:
 - Italian (9)
 - Asian (8)
 - Mexican (9)
 - American (6)
 
-Prices range from $5 (Edamame) to $19.95 (Shrimp Scampi), with an average menu item price of $13.29. Italian is the highest-priced category on average ($16.75), followed by Asian ($13.48). 
+The Asian category had the most items ordered at 3470, followed by Italian (2948), Mexican (2945), and American (2734). Interestingly, although the American category trailed the rest, 3 of the most frequently ordered items were in that category:
 
-We have 3 months of order data--from January through March, with 5370 total orders and 12,234 items ordered. The 7 top orders by item count had 14 items on them, and 20 orders had more than 12 items. January and March had similar order numbers (1800+), while there was a dip in February (<1700).
-
-The most frequently ordered items were:
-- Hamburger, $12.95
+- ** Hamburger, $12.95 **
 - Edamame, $5
 - Korean Beef Bowl, $17.95
-- Cheeseburger, $13.95
-- French Fries, $7
+- ** Cheeseburger, $13.95 **
+- ** French Fries, $7 **
+
+Prices range from $5 (Edamame) to $19.95 (Shrimp Scampi), with an average menu item price of $13.29. Italian is the highest-priced category on average ($16.75), followed by Asian ($13.48). 
 
 And the least frequently ordered items were:
 - Chicken Tacos, $11.95
