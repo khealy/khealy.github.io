@@ -6,7 +6,7 @@ Kristen Healy
 
 - [Assignment](#assignment)
 - [Executive Summary](#executive-summary)
-- [Detailed Analysis](#detailed-analysis)
+- [Query Details](#query-details)
   - [Menu Items](#menu-items-table)
   - [Orders](#orders-table)
   - [Combined Data](#combined-data)
