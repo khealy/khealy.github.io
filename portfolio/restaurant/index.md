@@ -27,6 +27,22 @@ Prices range from $5 (Edamame) to $19.95 (Shrimp Scampi), with an average menu i
 
 We have 3 months of order data--from January through March, with 5370 total orders and 12,234 items ordered. The 7 top orders by item count had 14 items on them, and 20 orders had more than 12 items. January and March had similar order numbers (1800+), while there was a dip in February (<1700).
 
+The most frequently ordered items were:
+- Hamburger, $12.95
+- Edamame, $5
+- Korean Beef Bowl, $17.95
+- Cheeseburger, $13.95
+- French Fries, $7
+
+And the least frequently ordered items were:
+- Chicken Tacos, $11.95
+- Postickers, $9
+- Cheese Lasagna, $15.50,
+- Steak Tacos, $13.95
+- Cheese Quasadillas, $10.50
+
+The least freq
+
 The top 5 orders by spend (>$185) ordered heavily from the Italian category,
 
 **Note:** I used "top orders" as a proxy for "top customers" since we have order- and item-level data but not customer-level data.
@@ -213,12 +229,12 @@ FROM
 ![order/combined view](images/fullOrderDetails.png)
 
 ```
-/* most often ordered */
+/* most often ordered (items)*/
 SELECT
 	item_name,
     category,
     price,
-    COUNT(item_id) item_count
+    COUNT(item_id) AS item_count
 FROM
 	full_order_details
 GROUP BY
@@ -226,7 +242,23 @@ GROUP BY
 ORDER BY
 	item_count DESC;
 ```
-![items by order frequency](images/popularItems.png)
+![categories by order frequency](images/popularCats.png)
+
+```
+/* most often ordered (categories)*/
+SELECT
+	category,
+    ROUND(AVG(price),2) AS avg_price,
+    COUNT(category) AS cat_count
+FROM
+	full_order_details
+GROUP BY
+	category
+ORDER BY
+	cat_count DESC;
+```
+![categories by item count](images/categoryPopularity.png)
+
 ```
 /* rank orders by highest spend */
 SELECT 
