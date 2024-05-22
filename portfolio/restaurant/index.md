@@ -219,7 +219,7 @@ GROUP BY order_id
 ORDER BY total_price DESC;
 ```
 ![orders ranked by highest spend](images/highestSpend.png)
-``
+```
 /* rank orders by highest number of items with order total as tiebreaker */
 SELECT 
 	order_id,
