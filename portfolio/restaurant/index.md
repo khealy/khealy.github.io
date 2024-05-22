@@ -16,7 +16,7 @@ The fictional Taste of the World Café, a restaurant serving international cuisi
 
 Because the owner wants the information quickly and the data is in a MySQL database, all of the analysis will be done in SQL.
 
-## Executive Summary
+## Executive Summary and Recommendations
 We have 3 months of order data--from January through March, with 5370 total orders and 12,234 items ordered. The 7 top orders by item count had 14 items on them, and 20 orders had more than 12 items. January and March had similar order numbers (1800+), while there was a dip in February (<1700).
 
 The menu has 32 items across 4 different international cuisines:
@@ -25,7 +25,7 @@ The menu has 32 items across 4 different international cuisines:
 - Mexican (9)
 - American (6)
 
-The Asian category had the most items ordered at 3470, followed by Italian (2948), Mexican (2945), and American (2734). Interestingly, although the American category trailed the rest, 3 of the most frequently ordered items were in that category:
+The Asian category had the most items ordered at 3470, followed by Italian (2948), Mexican (2945), and American (2734). Interestingly, although the **American** category trailed the rest, 3 of the most frequently ordered items were in that category:
 
 - **Hamburger, $12.95**
 - Edamame, $5
@@ -33,7 +33,14 @@ The Asian category had the most items ordered at 3470, followed by Italian (2948
 - **Cheeseburger, $13.95**
 - **French Fries, $7**
 
-Prices range from $5 (Edamame) to $19.95 (Shrimp Scampi), with an average menu item price of $13.29. Italian is the highest-priced category on average ($16.75), followed by Asian ($13.48). 
+Prices range from $5 (Edamame) to $19.95 (Shrimp Scampi), with an average menu item price of $13.29. Italian is the highest-priced category on average ($16.75), followed by Asian ($13.48), Mexican ($11.82), and American ($10.33). 
+
+Given that, it wasn't suprising to find that the **top 5 orders by spend** (>$185) ordered heavily from the Italian category:
+
+- Italian, 26 items
+- Asian, 17 items
+- Mexican, 16 items
+- American, 10 item
 
 And the least frequently ordered items were:
 - Chicken Tacos, $11.95
@@ -42,13 +49,14 @@ And the least frequently ordered items were:
 - Steak Tacos, $13.95
 - Cheese Quasadillas, $10.50
 
-The least freq
-
-The top 5 orders by spend (>$185) ordered heavily from the Italian category,
-
 **Note:** I used "top orders" as a proxy for "top customers" since we have order- and item-level data but not customer-level data.
 
-## Detailed Analysis
+### Recommendations ###
+Although the "American" category has the lowest average prices, the items in this category are ordered frequently when looking at orders as a whole. Although it's ordered far less often by our top spenders, I would recommend leaving the category as-is, since this seems to indicate that it's broadly popular.
+
+The "Mexican" category, however, needs changes. I would recommend eliminating the Chicken Tacos from the menu since it's performing poorly: it was ordered only once by our highest spend orders
+
+## Query Details
 The restaurant database consists of 2 tables:
 - menu_items
 - order_detail
@@ -243,7 +251,7 @@ GROUP BY
 ORDER BY
 	item_count DESC;
 ```
-![categories by order frequency](images/popularCats.png)
+![categories by order frequency](images/popularItems.png)
 
 ```
 /* most often ordered (categories)*/
