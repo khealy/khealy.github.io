@@ -42,21 +42,14 @@ Given that, it wasn't suprising to find that the **top 5 orders by spend** (>$18
 - Mexican, 16 items
 - American, 10 item
 
-And the least frequently ordered items were:
-- Chicken Tacos, $11.95
-- Postickers, $9
-- Cheese Lasagna, $15.50
-- Steak Tacos, $13.95
-- Cheese Quasadillas, $10.50
-
 **Note:** I used "top orders" as a proxy for "top customers" since we have order- and item-level data but not customer-level data.
 
 ### Recommendations ###
-Although the American category has the lowest average prices, the items in this category are ordered frequently by customers as a whole. Although it's ordered far less often by our top spenders, I would recommend leaving the category as is; its broad popularity indicates that it's an important category for driving numbers of people to the restaurant.
+Although the American category has the lowest average prices, the items in this category are ordered frequently by customers as a whole. Although it's ordered far less often by our top spenders, I would recommend leaving the category as is because it's driving both revenue and order numbers. The cheeseburger and hamburger, for example are among our top 5 items by revenue.
 
 The Mexican category, however, needs changes. I would recommend eliminating both the Chicken Tacos and the Cheese Quesadillas from the menu since they're performing poorly. The tacos were ordered only once by our highest spenders and is the least popular item amongst all customer orders, despite its relatively low price ($11.95). Similarly the quesadillas ($10.95) were the 5th least popular item overall and weren't ordered at all by our highest spenders.
 
-Overall, both the Italian and Asian categories are doing well
+Overall, both the Italian and Asian categories are doing well. Both categories are broadly populary judged by order item count
 
 ## Query Details
 The restaurant database consists of 2 tables:
@@ -285,6 +278,20 @@ ORDER BY
 	item_revenue DESC;
 ```
 ![items by revenue](images/itemsByRevenue.png)
+
+```
+/* category revenue */
+SELECT
+	category,
+    SUM(price) AS category_revenue
+FROM
+	full_order_details
+GROUP B
+	category
+ORDER BY
+	category_revenue DESC;
+```
+![category revenue](images/categoryRevenue.png)
 ```
 /* rank orders by highest spend */
 SELECT 
