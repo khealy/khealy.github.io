@@ -230,3 +230,24 @@ GROUP BY order_id
 ORDER BY item_count DESC, SUM(price) DESC;
 ```
 ![orders ranked by highest item count](images/highestItemCount.png)
+
+```
+/* order 2075 was in the top 5 by spend but not by total items...
+	order 3473 was in the top 5 by total items but not by spend...
+    what was on these 2 orders?
+*/
+SELECT 
+	order_id,
+    item_name,
+    category,
+    COUNT(item_id),
+    price
+FROM 
+	full_order_details
+WHERE 
+	order_id 
+		IN (2075,3473)
+GROUP BY 1,2,3,5
+ORDER BY order_id, price DESC;
+```
+![outliers](images/outliers.png)
