@@ -295,7 +295,7 @@ ORDER BY items_in_cat DESC;
 ```
 ![highest spend category count](images/highestSpendCatCount.png)
 ```
-/* top items from top 5 orders by spend*/
+/* items from top 5 orders by spend*/
 WITH top_five AS
 	(SELECT 
 		order_id
@@ -319,9 +319,9 @@ WHERE
 GROUP BY category,item_name, price
 ORDER BY num_items DESC;
 ```
-![top 5 orders by total spend](images/itemsTop5Spend.png)
+![items from top 5 orders by total spend](images/itemsTop5Spend.png)
 ```
-/* top items from 5 top orders by item count*/
+/* items from 5 top orders by item count*/
 WITH top_five AS
 	(SELECT 
 		order_id
@@ -345,4 +345,53 @@ WHERE
 GROUP BY category,item_name, price
 ORDER BY num_items DESC;
 ```
-![top 5 orders by item count - items](images/itemsTop5ItemCount.png)
+![items from top 5 orders by item count - items](images/itemsTop5ItemCount.png)
+
+```
+/* category count for top 5 orders by spend*/
+WITH top_five AS
+	(SELECT 
+		order_id
+	FROM
+		full_order_details
+	GROUP BY order_id
+	ORDER BY SUM(price) DESC
+	LIMIT 5)
+SELECT
+	category,
+    COUNT(category) cat_count_order_freq
+FROM 
+	full_order_details
+WHERE 
+	order_id IN
+		(SELECT order_id
+		FROM
+			top_five)
+GROUP BY category
+ORDER BY cat_count_order_freq DESC;
+```
+![categories from top 5 orders by spend - items](images/catCountTop5Spend.png)
+```
+/* category count for top 5 orders by item count*/
+WITH top_five AS
+	(SELECT 
+		order_id
+	FROM
+		full_order_details
+	GROUP BY order_id
+	ORDER BY COUNT(item_id) DESC, SUM(price) DESC
+	LIMIT 5)
+SELECT
+	category,
+    COUNT(category) cat_count_order_freq
+FROM 
+	full_order_details
+WHERE 
+	order_id IN
+		(SELECT order_id
+		FROM
+			top_five)
+GROUP BY category
+ORDER BY cat_count_order_freq DESC;
+```
+![categories top 5 orders by item count - items](images/catCountType5ItemCount.png)
