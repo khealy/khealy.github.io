@@ -292,6 +292,15 @@ ORDER BY
 	category_revenue DESC;
 ```
 ![category revenue](images/categoryRevenue.png)
+
+```
+/* total revenue */
+SELECT
+	SUM(price) AS total_revenue
+FROM
+	full_order_details;
+```
+![total revenue](images/totalRevenue.png)
 ```
 /* rank orders by highest spend */
 SELECT 
