@@ -4,4 +4,4 @@
 
 - [Maven Roasters Franchise Dashboard](https://1drv.ms/x/c/07bef487dbcd28dd/EZD0kAsW_J9Ph9sw_ZPC0DQBIqAazjGiItdDJf4mHKwMlQ?e=pn8gtp) - Dashboard created in **Excel** for New York owners of the fictional Maven Roasters coffee franchise. This dashboard gives the owners an overview of overall revenue trends and product popularity as well as high-traffic times, to help them determine what product and staffing changes are necessary.
 
-- [World Café Menu Analysis](portfollio/restaurant/index.md) - Analyzed 3 months of data using **SQL** following a menu change to reveal how the items are doing with customers and make recommendations for changes based on the data.
+- [World Café Menu Analysis](portfolio/restaurant/index.md) - Analyzed 3 months of data using **SQL** following a menu change to reveal how the items are doing with customers and make recommendations for changes based on the data.
