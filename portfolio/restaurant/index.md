@@ -27,11 +27,11 @@ The menu has 32 items across 4 different international cuisines:
 
 The Asian category had the most items ordered at 3470, followed by Italian (2948), Mexican (2945), and American (2734). Interestingly, although the American category trailed the rest, 3 of the most frequently ordered items were in that category:
 
-- ** Hamburger, $12.95 **
+- **Hamburger, $12.95**
 - Edamame, $5
 - Korean Beef Bowl, $17.95
-- ** Cheeseburger, $13.95 **
-- ** French Fries, $7 **
+- **Cheeseburger, $13.95**
+- **French Fries, $7**
 
 Prices range from $5 (Edamame) to $19.95 (Shrimp Scampi), with an average menu item price of $13.29. Italian is the highest-priced category on average ($16.75), followed by Asian ($13.48). 
 
