@@ -251,3 +251,46 @@ GROUP BY 1,2,3,5
 ORDER BY order_id, price DESC;
 ```
 ![outliers](images/outliers.png)
+
+```
+/* order details of highest spend order */
+SELECT
+	order_id,
+	category,
+    item_name,
+    price,
+    COUNT(item_name) num_items
+FROM 
+	full_order_details
+WHERE 
+	order_id = 
+    (SELECT order_id
+    FROM
+		full_order_details
+		GROUP BY order_id
+		ORDER BY SUM(price) DESC
+		LIMIT 1) -- returns order id of the order with the highest order total
+GROUP BY order_id,category,item_name, price
+ORDER BY num_items DESC;
+```
+![highest spend details](images/highestSpendDetails.png)
+```
+/* category count for top order by spend */
+SELECT
+	order_id,
+	category,
+    COUNT(category) AS items_in_cat
+FROM 
+	full_order_details
+WHERE 
+	order_id = 
+    (SELECT order_id
+    FROM
+		full_order_details
+		GROUP BY order_id
+		ORDER BY SUM(price) DESC
+		LIMIT 1)
+GROUP BY order_id, category
+ORDER BY items_in_cat DESC;
+```
+![highest spend category count](images/highestCatCount.png)
