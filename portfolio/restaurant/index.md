@@ -190,7 +190,7 @@ GROUP BY order_month;
 
 ### Combined Data
 
-After becoming familiar with the two tables, I used join queries to combine them for detailed analysis.
+After becoming familiar with the two tables, I joined them for further analysis.
 ```
 /* 	Create view combining the menu_items table and the order_details table.
 	We'll use this in other queries.
@@ -207,3 +207,26 @@ FROM
 	full_order_details;
 ```
 ![order/combined view](images/fullOrderDetails.png)
+
+```
+/* rank orders by highest spend */
+SELECT 
+	order_id,
+	SUM(price) AS total_price
+FROM
+	full_order_details
+GROUP BY order_id
+ORDER BY total_price DESC;
+```
+![orders ranked by highest spend](images/highestSpend.png)
+``
+/* rank orders by highest number of items with order total as tiebreaker */
+SELECT 
+	order_id,
+    COUNT(item_id) AS item_count
+FROM
+	full_order_details
+GROUP BY order_id
+ORDER BY item_count DESC, SUM(price) DESC;
+```
+![orders ranked by highest item count](images/highestItemCount.png)
