@@ -76,7 +76,6 @@ FROM menu_items;
 
 ![menu_items table](images/menu_items.png)
 
-
 ```
 /* number of menu items and categories */
 SELECT
@@ -84,7 +83,9 @@ SELECT
     COUNT(DISTINCT category) AS num_categories
 FROM menu_items;
 ```
+
 ![number of items and categories](images/ItemCatCount.png)
+
 ```
 /* Summary menu item pricing info */
 SELECT
@@ -98,6 +99,7 @@ SELECT
 		LIMIT 1) AS most_frequent_price
 FROM menu_items;
 ```
+
 ![pricing info](images/pricingInfo.png)
 
 ```
@@ -112,7 +114,9 @@ ORDER BY
 	price
 LIMIT 5;
 ```
+
 ![least expensive](images/leastExpensive.png)
+
 ```
 /* What are the most expensive items on the menu*/
 SELECT
@@ -125,6 +129,7 @@ ORDER BY
 	price DESC
 LIMIT 5;
 ```
+
 ![most expensive](images/mostExpensive.png)
 
 ```
@@ -139,6 +144,7 @@ FROM menu_items
 GROUP BY category
 ORDER BY avg_price DESC, num_items DESC;
 ```
+
 ![category pricing summary](images/categoryPricing.png)
 
 ### Orders Table
@@ -155,7 +161,9 @@ SELECT *
 FROM
 	order_details;
 ```
+
 ![orders table](images/orderTable.png)
+
 ```
 /* What order dates are included in the table? */
 SELECT 
@@ -163,8 +171,10 @@ SELECT
     MAX(order_date) AS last_date
 FROM
 	order_details;
- ```
+```
+
 ![order date range](images/orderDateRange.png)
+
 ```
 /* 	How many orders?
 	How many items were ordered?
@@ -175,7 +185,9 @@ SELECT
     COUNT(order_details_id) num_order_items
 FROM order_details;
 ```
+
 ![order and item counts](images/numOrderItems.png)
+
 ```
 /*	Which orders had the most items? */
 SELECT 
@@ -188,7 +200,9 @@ GROUP BY
 ORDER BY
 	num_items DESC;
 ```
+
 ![most items](images/mostItems.png)
+
 ```
 /*	How many orders had more than 12 items: */
 
@@ -203,6 +217,7 @@ GROUP BY
 HAVING
 	num_items > 12) AS num_orders;
 ```
+
 ![orders with more than 12 items](images/twelveOrMore.png)
 
 ```
@@ -214,6 +229,7 @@ SELECT
 FROM order_details 
 GROUP BY order_month;
 ```
+
 ![order/item counts by month](images/countsByMonth.png)
 
 ### Combined Data
@@ -234,6 +250,7 @@ SELECT *
 FROM
 	full_order_details;
 ```
+
 ![order/combined view](images/fullOrderDetails.png)
 
 ```
@@ -250,6 +267,7 @@ GROUP BY
 ORDER BY
 	item_count DESC;
 ```
+
 ![categories by order frequency](images/popularItems.png)
 
 ```
@@ -265,7 +283,9 @@ GROUP BY
 ORDER BY
 	cat_count DESC;
 ```
+
 ![categories by item count](images/categoryPopularity.png)
+
 ```
 /* items by revenue */
 SELECT
@@ -281,6 +301,7 @@ GROUP BY
 ORDER BY
 	item_revenue DESC;
 ```
+
 ![items by revenue](images/itemsByRevenue.png)
 
 ```
@@ -295,6 +316,7 @@ GROUP B
 ORDER BY
 	category_revenue DESC;
 ```
+
 ![category revenue](images/categoryRevenue.png)
 
 ```
@@ -304,7 +326,9 @@ SELECT
 FROM
 	full_order_details;
 ```
+
 ![total revenue](images/totalRevenue.png)
+
 ```
 /* rank orders by highest spend */
 SELECT 
@@ -315,7 +339,9 @@ FROM
 GROUP BY order_id
 ORDER BY total_price DESC;
 ```
+
 ![orders ranked by highest spend](images/highestSpend.png)
+
 ```
 /* rank orders by highest number of items with order total as tiebreaker */
 SELECT 
@@ -326,6 +352,7 @@ FROM
 GROUP BY order_id
 ORDER BY item_count DESC, SUM(price) DESC;
 ```
+
 ![orders ranked by highest item count](images/highestItemCount.png)
 
 ```
@@ -347,7 +374,9 @@ WHERE
 GROUP BY 1,2,3,5
 ORDER BY order_id, price DESC;
 ```
+
 ![outliers](images/outliers.png)
+
 
 ```
 /* order details of highest spend order */
@@ -370,7 +399,9 @@ WHERE
 GROUP BY order_id,category,item_name, price
 ORDER BY num_items DESC;
 ```
+
 ![highest spend details](images/highestSpendDetails.png)
+
 ```
 /* category count for top order by spend */
 SELECT
@@ -390,7 +421,9 @@ WHERE
 GROUP BY order_id, category
 ORDER BY items_in_cat DESC;
 ```
+
 ![highest spend category count](images/highestSpendCatCount.png)
+
 ```
 /* items from top 5 orders by spend*/
 WITH top_five AS
@@ -416,7 +449,9 @@ WHERE
 GROUP BY category,item_name, price
 ORDER BY num_items DESC;
 ```
+
 ![items from top 5 orders by total spend](images/itemsTop5Spend.png)
+
 ```
 /* items from 5 top orders by item count*/
 WITH top_five AS
@@ -442,7 +477,9 @@ WHERE
 GROUP BY category,item_name, price
 ORDER BY num_items DESC;
 ```
+
 ![items from top 5 orders by item count - items](images/itemsTop5ItemCount.png)
+
 
 ```
 /* category count for top 5 orders by spend*/
@@ -467,7 +504,10 @@ WHERE
 GROUP BY category
 ORDER BY cat_count_order_freq DESC;
 ```
+
 ![categories from top 5 orders by spend - items](images/catCountTop5Spend.png)
+
+
 ```
 /* category count for top 5 orders by item count*/
 WITH top_five AS
@@ -491,4 +531,5 @@ WHERE
 GROUP BY category
 ORDER BY cat_count_order_freq DESC;
 ```
+
 ![categories top 5 orders by item count - items](images/catCountType5ItemCount.png)
