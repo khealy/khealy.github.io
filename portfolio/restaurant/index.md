@@ -73,7 +73,9 @@ USE restaurant_db;
 SELECT *
 FROM menu_items;
 ```
+
 ![menu_items table](images/menu_items.png)
+
 
 ```
 /* number of menu items and categories */
