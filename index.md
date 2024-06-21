@@ -1,3 +1,10 @@
+---
+title: Projects
+output: 
+  html_document:
+    includes:
+       in_header: /assets/code/ga.html
+---
 # Projects
 
 - [Bike Share Case Study](portfolio/bikeshare/index.md) - Exploration of Divvy bike share data using **R**. The purpose of this study was to determine the differences between how members and casual riders use Divvy differently, to make recommendations regarding possible marketing strategies to convert casual riders into members.
